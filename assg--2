@@ -1,0 +1,31 @@
+int missingNumber(int* nums, int numsSize)
+{
+    int v=numsSize;
+    int k[v];
+    int a;
+    for(int i=0;i<numsSize;i++)
+    {
+        a=nums[i];
+        k[a]=1;
+    }
+    
+    for(int i=0;i<=numsSize;i++)
+    {
+        if(k[i]==0)
+        return i;
+    }
+
+}
+int main() {
+   
+    int n;
+    scanf("%d",&n);
+    int x[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    int ans=missingNumber(x,n);
+    printf("%d ",ans);
+    return 0;
+}
